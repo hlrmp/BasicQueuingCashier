@@ -28,26 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             btncashier = new Button();
             label1 = new Label();
             label2 = new Label();
             lblQueue = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // btncashier
             // 
-            btncashier.Location = new Point(12, 55);
+            btncashier.BackColor = Color.FromArgb(255, 128, 128);
+            btncashier.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btncashier.Location = new Point(12, 64);
             btncashier.Name = "btncashier";
             btncashier.Size = new Size(114, 73);
             btncashier.TabIndex = 0;
             btncashier.Text = "CASHIER";
-            btncashier.UseVisualStyleBackColor = true;
+            btncashier.UseVisualStyleBackColor = false;
             btncashier.Click += btncashier_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(203, 38);
+            label1.Location = new Point(203, 55);
             label1.Name = "label1";
             label1.Size = new Size(101, 15);
             label1.TabIndex = 1;
@@ -58,7 +62,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Light", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.Red;
-            label2.Location = new Point(12, 131);
+            label2.Location = new Point(12, 151);
             label2.Name = "label2";
             label2.Size = new Size(114, 13);
             label2.TabIndex = 2;
@@ -68,11 +72,14 @@
             // 
             lblQueue.AutoSize = true;
             lblQueue.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblQueue.Location = new Point(203, 72);
+            lblQueue.Location = new Point(212, 98);
             lblQueue.Name = "lblQueue";
-            lblQueue.Size = new Size(60, 30);
+            lblQueue.Size = new Size(0, 30);
             lblQueue.TabIndex = 3;
-            lblQueue.Text = "label";
+            // 
+            // timer1
+            // 
+        
             // 
             // Form1
             // 
@@ -95,5 +102,6 @@
         private Label label1;
         private Label label2;
         private Label lblQueue;
+        private System.Windows.Forms.Timer timer1;
     }
 }

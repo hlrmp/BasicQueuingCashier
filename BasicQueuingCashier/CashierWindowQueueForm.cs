@@ -36,10 +36,36 @@ namespace BasicQueuingCashier
         private void timer1_Tick_1(object sender, EventArgs e)
         {
 
+            DisplayCashierQueue(CashierClass.CashierQueue);
+          //  listCashierQueue.Refresh();
+        }
+
+
+        private void btnnext_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                labelnext.Text = CashierClass.CashierQueue.Peek();
+                CashierClass.CashierQueue.Dequeue();
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(" The list is empty  ", " FINISH ", MessageBoxButtons.OK);
+            }
+
+           
+        }
+
+        private void CashierWindowQueueForm_Load(object sender, EventArgs e)
+        {
             Timer timer = new Timer();
-            timer.Interval = (1 * 1000); 
+            timer.Interval = (1 * 1000);
             timer.Tick += new EventHandler(timer1_Tick_1);
             timer.Start();
+
         }
     }
 }

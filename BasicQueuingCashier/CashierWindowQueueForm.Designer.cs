@@ -33,59 +33,75 @@
             btnnext = new Button();
             listCashierQueue = new ListBox();
             timer1 = new System.Windows.Forms.Timer(components);
+            labelnext = new Label();
             SuspendLayout();
             // 
             // btnrefresh
             // 
+            btnrefresh.BackColor = Color.FromArgb(255, 128, 128);
             btnrefresh.Location = new Point(48, 35);
             btnrefresh.Name = "btnrefresh";
             btnrefresh.Size = new Size(82, 32);
             btnrefresh.TabIndex = 0;
             btnrefresh.Text = "REFRESH";
-            btnrefresh.UseVisualStyleBackColor = true;
+            btnrefresh.UseVisualStyleBackColor = false;
             btnrefresh.Click += btnrefresh_Click;
             // 
             // btnnext
             // 
-            btnnext.Location = new Point(48, 85);
+            btnnext.BackColor = Color.FromArgb(255, 128, 128);
+            btnnext.Location = new Point(48, 89);
             btnnext.Name = "btnnext";
             btnnext.Size = new Size(82, 30);
             btnnext.TabIndex = 1;
             btnnext.Text = "NEXT";
-            btnnext.UseVisualStyleBackColor = true;
+            btnnext.UseVisualStyleBackColor = false;
+            btnnext.Click += btnnext_Click;
             // 
             // listCashierQueue
             // 
             listCashierQueue.FormattingEnabled = true;
             listCashierQueue.ItemHeight = 15;
-            listCashierQueue.Location = new Point(177, 12);
+            listCashierQueue.Location = new Point(183, 35);
             listCashierQueue.Name = "listCashierQueue";
-            listCashierQueue.Size = new Size(172, 214);
+            listCashierQueue.Size = new Size(172, 259);
             listCashierQueue.TabIndex = 2;
             // 
             // timer1
             // 
             timer1.Tick += timer1_Tick_1;
             // 
+            // labelnext
+            // 
+            labelnext.AutoSize = true;
+            labelnext.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelnext.Location = new Point(48, 150);
+            labelnext.Name = "labelnext";
+            labelnext.Size = new Size(0, 25);
+            labelnext.TabIndex = 3;
+            // 
             // CashierWindowQueueForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(400, 265);
+            ClientSize = new Size(400, 324);
+            Controls.Add(labelnext);
             Controls.Add(listCashierQueue);
             Controls.Add(btnnext);
             Controls.Add(btnrefresh);
             Name = "CashierWindowQueueForm";
             Text = "CashierWindowQueueForm";
-        
+            Load += CashierWindowQueueForm_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button btnrefresh;
         private Button btnnext;
-        private ListBox listCashierQueue;
         private System.Windows.Forms.Timer timer1;
+        private Label labelnext;
+        public ListBox listCashierQueue;
     }
 }

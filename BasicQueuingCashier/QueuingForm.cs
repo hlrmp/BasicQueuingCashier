@@ -1,15 +1,20 @@
+
+
+
+
 namespace BasicQueuingCashier
 {
 
     public partial class Form1 : Form
     {
         private CashierClass cashier;
+        CashierWindowQueueForm cf;
         public Form1()
         {
             InitializeComponent();
 
             cashier = new CashierClass();
-            CashierWindowQueueForm cf = new CashierWindowQueueForm();
+             cf = new CashierWindowQueueForm();
             cf.Show();
         }
 
@@ -20,6 +25,9 @@ namespace BasicQueuingCashier
             CashierClass.getNumberInQueue = lblQueue.Text;
             CashierClass.CashierQueue.Enqueue(CashierClass.getNumberInQueue);
 
+          
         }
+
+       
     }
 }
