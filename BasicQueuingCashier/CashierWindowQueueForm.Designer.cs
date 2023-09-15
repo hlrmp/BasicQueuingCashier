@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             btnrefresh = new Button();
             btnnext = new Button();
             listCashierQueue = new ListBox();
+            timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // btnrefresh
@@ -61,6 +63,10 @@
             listCashierQueue.Size = new Size(172, 214);
             listCashierQueue.TabIndex = 2;
             // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick_1;
+            // 
             // CashierWindowQueueForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -71,6 +77,7 @@
             Controls.Add(btnrefresh);
             Name = "CashierWindowQueueForm";
             Text = "CashierWindowQueueForm";
+        
             ResumeLayout(false);
         }
 
@@ -79,5 +86,6 @@
         private Button btnrefresh;
         private Button btnnext;
         private ListBox listCashierQueue;
+        private System.Windows.Forms.Timer timer1;
     }
 }
