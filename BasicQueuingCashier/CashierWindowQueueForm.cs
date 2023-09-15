@@ -37,7 +37,7 @@ namespace BasicQueuingCashier
         {
 
             DisplayCashierQueue(CashierClass.CashierQueue);
-          //  listCashierQueue.Refresh();
+            //  listCashierQueue.Refresh();
         }
 
 
@@ -56,7 +56,7 @@ namespace BasicQueuingCashier
                 MessageBox.Show(" The list is empty  ", " FINISH ", MessageBoxButtons.OK);
             }
 
-           
+
         }
 
         private void CashierWindowQueueForm_Load(object sender, EventArgs e)

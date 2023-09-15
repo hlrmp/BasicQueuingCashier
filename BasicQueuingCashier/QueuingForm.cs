@@ -14,7 +14,7 @@ namespace BasicQueuingCashier
             InitializeComponent();
 
             cashier = new CashierClass();
-             cf = new CashierWindowQueueForm();
+            cf = new CashierWindowQueueForm();
             cf.Show();
         }
 
@@ -25,9 +25,9 @@ namespace BasicQueuingCashier
             CashierClass.getNumberInQueue = lblQueue.Text;
             CashierClass.CashierQueue.Enqueue(CashierClass.getNumberInQueue);
 
-          
+
         }
 
-       
+
     }
 }

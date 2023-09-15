@@ -71,15 +71,11 @@
             // lblQueue
             // 
             lblQueue.AutoSize = true;
-            lblQueue.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblQueue.Location = new Point(212, 98);
+            lblQueue.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblQueue.Location = new Point(203, 100);
             lblQueue.Name = "lblQueue";
-            lblQueue.Size = new Size(0, 30);
+            lblQueue.Size = new Size(0, 37);
             lblQueue.TabIndex = 3;
-            // 
-            // timer1
-            // 
-        
             // 
             // Form1
             // 

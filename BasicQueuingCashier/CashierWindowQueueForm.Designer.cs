@@ -34,6 +34,7 @@
             listCashierQueue = new ListBox();
             timer1 = new System.Windows.Forms.Timer(components);
             labelnext = new Label();
+            label1 = new Label();
             SuspendLayout();
             // 
             // btnrefresh
@@ -74,17 +75,27 @@
             // labelnext
             // 
             labelnext.AutoSize = true;
-            labelnext.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            labelnext.Location = new Point(48, 150);
+            labelnext.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            labelnext.Location = new Point(25, 182);
             labelnext.Name = "labelnext";
-            labelnext.Size = new Size(0, 25);
+            labelnext.Size = new Size(0, 32);
             labelnext.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(48, 147);
+            label1.Name = "label1";
+            label1.Size = new Size(84, 15);
+            label1.TabIndex = 4;
+            label1.Text = "number in line";
             // 
             // CashierWindowQueueForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(400, 324);
+            Controls.Add(label1);
             Controls.Add(labelnext);
             Controls.Add(listCashierQueue);
             Controls.Add(btnnext);
@@ -103,5 +114,6 @@
         private System.Windows.Forms.Timer timer1;
         private Label labelnext;
         public ListBox listCashierQueue;
+        private Label label1;
     }
 }
